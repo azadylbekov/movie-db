@@ -73,7 +73,7 @@ export default function Home() {
 	useEffect(() => {
 		if (search) {
 			setIsPending(true);
-			const url = `${API}search/movie/?query=${search}&api_key=${API_KEY}`
+			url = `https://api.themoviedb.org/3/search/movie/?query=${search}&api_key=${API_KEY}`
 			fetch(url)
 				.then(res => {
 					if (!res.ok) {
@@ -89,7 +89,7 @@ export default function Home() {
 					setIsGenrePending(false);
 				})
 				.catch(err => {
-					console.err(err)
+					console.error(err)
 				})
 		} else {
 			setPage(1);

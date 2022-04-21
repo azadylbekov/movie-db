@@ -84,7 +84,7 @@ export default function Card({ id, title, release_date, poster_path, genre_list,
 				{poster_path ?
 					<img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt="" />
 					:
-					<div class="no-image">No image</div>
+					<div className="no-image">No image</div>
 				}
 				<div className="content">
 					<div>
