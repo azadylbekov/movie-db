@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import Home from './Pages/Home'
 import Detail from './Pages/Detail'
 import Favorites from './Pages/Favorites'
@@ -8,7 +8,7 @@ import Favorites from './Pages/Favorites'
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="main-content">
         <Switch>
           <Route exact path="/">
@@ -22,7 +22,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
