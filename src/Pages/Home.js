@@ -73,7 +73,7 @@ export default function Home() {
 	useEffect(() => {
 		if (search) {
 			setIsPending(true);
-			url = `https://api.themoviedb.org/3/search/movie/?query=${search}&api_key=${API_KEY}`
+			url = `https://api.themoviedb.org/3/search/movie?query=${search}&api_key=${API_KEY}`
 			fetch(url)
 				.then(res => {
 					if (!res.ok) {
